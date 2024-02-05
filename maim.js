@@ -366,3 +366,124 @@ for (let y = 0; y < size; y++) {
 }
 
 console.log(board);
+
+let num2 = 20;
+
+function showFirstMessage(text) {
+    console.log(text);
+    num2 = 10;
+};
+showFirstMessage("Hello world");
+console.log(num2);
+
+function calc(a, b) {
+    return (a + b);
+};
+console.log(calc(4, 3));
+console.log(calc(5,6));
+console.log(calc(10, 6));
+
+function ret() {
+    let num = 50;
+    return num;
+};
+const anotherNum = ret();
+console.log(anotherNum);
+
+const logger = function () {
+    console.log("Hello");
+};
+
+logger();
+
+const calc1 = (a, b) => {return a + b};
+const calc2 = a => a + b;
+const calc3 = (a, b) => {
+    console.log('1');
+    return a + b
+};
+
+const usdCurr = 28;
+const eurCurr = 32;
+const discount = 0.9;
+
+function convert (amount, curr) {
+    return curr * amount;
+};
+
+function promotion (result) {
+    console.log(result * discount);
+};
+
+const res = promotion(convert(500, usdCurr));
+promotion(res);
+convert(500, usdCurr);
+convert(500, eurCurr);
+
+function test () {
+    for (let i = 0; i < 5; i++) {
+        console.log(i)
+        if(i == 3) {
+            return
+        }
+    }
+    console.log("Done"); //Неп работает так как ретурн закончил работу ф-ции
+};
+
+test ();
+
+function doNothing() {}
+console.log(doNothing()===undefined);
+
+function sayHello(name) {
+    return 'Привет, '+ name;
+}
+sayHello('John');
+console.log(sayHello('John'));
+
+function returnNeighboringNumbers(num) {
+    return [num - 1, num, num + 1];
+}
+console.log(returnNeighboringNumbers(5));
+
+function getMathResult(base, progresja) {
+    if (typeof(progresja) !== 'number' || progresja <= 0) {
+        return base;
+    }
+
+    let str = '';
+
+    for (let i = 1; i <= progresja; i++) {
+        if (i === progresja) {
+            str += `${base * i}`;
+            // Тут без черточек в конце
+        } else {
+            str += `${base * i}---`;
+            // Это тоже самое, что и
+            // str = str + num * i + "---"
+        }
+    }
+    return str;
+};
+console.log(getMathResult(10, 5));
+
+const str = "test";
+const arr1 = [1, 2, 3];
+console.log(str.toUpperCase());
+console.log(str.toLowerCase());
+console.log(arr1.length);
+
+const fruit = "Some fruit";
+console.log(fruit.indexOf("fruit"));
+
+const logg = "Hello world";
+console.log(logg.slice(6, 11));
+console.log(logg.substring(6, 11));
+console.log(logg.substr(6, 3));
+
+const nut = 12.2;
+console.log(Math.round(nut));
+
+const test1 = "12.2px";
+console.log(parseInt(test1));
+console.log(parseFloat(test1));
